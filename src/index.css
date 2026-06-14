@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #D4AF37;
+  --color-gold-light: #F3E5AB;
+  --color-gold-dark: #AA8000;
+  --color-red-luxury: #C5001A;
+  --color-red-glow: rgba(197, 0, 26, 0.6);
+  --color-obsidian: #0A0A0A;
+  --color-charcoal: #141414;
+  
+  --font-sans: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+}
+
+/* Custom base styles */
+body {
+  @apply bg-black text-gray-100 antialiased overflow-x-hidden;
+  background-image: radial-gradient(circle at 50% 0%, #1c0205 0%, #000000 80%);
+}
+
+/* Luxury 3D Red Texture Pattern Overlay */
+.luxury-red-mesh {
+  background-image: 
+    radial-gradient(at 10% 20%, rgba(197, 0, 26, 0.15) 0px, transparent 50%),
+    radial-gradient(at 90% 80%, rgba(212, 175, 55, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(197, 0, 26, 0.12) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Beautiful moving background glowing orbs */
+.orb-red {
+  background: radial-gradient(circle, rgba(197, 0, 26, 0.35) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(80px);
+}
+
+.orb-gold {
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(90px);
+}
+
+.orb-white {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(100px);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.6);
+}
+
+.glass-red {
+  background: rgba(30, 2, 4, 0.65);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 0, 26, 0.35);
+  box-shadow: 
+    0 12px 40px 0 rgba(197, 0, 26, 0.15),
+    0 0 20px rgba(197, 0, 26, 0.25);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #fff, #b3b3b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(to right, #D4AF37, #F3E5AB, #AA8000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-red {
+  background: linear-gradient(to right, #ff4d4d, #C5001A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 3D Button Style */
+.btn-gold-3d {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+  box-shadow: 
+    0 4px 15px rgba(212, 175, 55, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-shadow: 0 1px 5px rgba(212, 175, 55, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px rgba(212, 175, 55, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: #fff;
+  background: linear-gradient(135deg, #D4AF37 0%, #AA8000 100%);
+  border-color: transparent;
+}
+
+.btn-red-3d {
+  background: linear-gradient(135deg, #C5001A 0%, #8b0000 100%);
+  color: white;
+  border: 1px solid #ff4d4d;
+  box-shadow: 
+    0 4px 15px rgba(197, 0, 26, 0.4),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-red-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 30px rgba(197, 0, 26, 0.6),
+    inset 0 2px 0 rgba(255,255,255,0.3);
+  filter: brightness(1.2);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px rgba(197, 0, 26, 0.3); }
+  100% { box-shadow: 0 0 25px rgba(197, 0, 26, 0.7); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5001A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4d4d;
+}

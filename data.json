@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "id": "item_1781376517691",
+      "title": "Plant Kingdom One Shot - Education Thumbnail",
+      "category": "Thumbnails",
+      "imageUrl": "/uploads/plant_kingdom_thumbnail_1781376517691.jpg",
+      "createdAt": "2026-06-13T18:48:43.000Z"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "name": "Rahul Verma",
+      "brand": "TechyRahul",
+      "review": "Gautam completely transformed my YouTube channel. CTR went from 4% to 11% in a week!",
+      "stars": 5,
+      "createdAt": "2026-06-14T07:03:30.829Z"
+    },
+    {
+      "id": "t2",
+      "name": "Sneha Designs",
+      "brand": "Sneha Boutique",
+      "review": "The luxury branding package was exactly what my business needed. Pure premium quality.",
+      "stars": 5,
+      "createdAt": "2026-06-14T07:03:30.829Z"
+    },
+    {
+      "id": "t3",
+      "name": "Amit Singh",
+      "brand": "Fitness Pro",
+      "review": "Next level poster designs. He understands the exact vibe needed for fitness campaigns.",
+      "stars": 5,
+      "createdAt": "2026-06-14T07:03:30.829Z"
+    }
+  ],
+  "adminUser": {
+    "username": "DESINERGAUTAM",
+    "password": "PRINCE@123",
+    "createdAt": "2026-06-14T07:04:40.554Z"
+  }
+}
